@@ -25,3 +25,14 @@ container.innerHTML = `
     <p>${todo.name}</p>
     <p>${todo.completed ? "Yep" : "Nope"}</p>
 `;
+
+// Let and Const
+for (var x = 0; x <= 5; x++) {
+    var counter = x;
+    // let counter2 = x;
+    // const counter3 = x;
+    // const counter3 = x + 1;
+    //Cannot change const value
+}
+console.log(counter);
+// console.log(counter2); Not possible when using let
