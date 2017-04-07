@@ -36,3 +36,19 @@ for (var x = 0; x <= 5; x++) {
 }
 console.log(counter);
 // console.log(counter2); Not possible when using let
+
+// For of loops
+var array = [
+    "Pick up drycleaning",
+    "Clean Batcave",
+    "Save Gotham"
+];
+// Old Style
+for (var index in array) {
+    var value = array[index];
+    console.log(`${index}: ${value}`);
+}
+// New Style
+for (var value of array) {
+    console.log(`${value}`);
+}
