@@ -83,3 +83,44 @@ var todo2 = {
 }
 var {id2, title2, completed2} = todo2;
 // Same but for object
+
+// Spread operator
+// Old way
+function add() {
+    var values = Array.prototype.splice.call(arguments, [1]),
+        total = 0;
+
+    for (var value of values) {
+        total += value;
+    }
+
+    return total;
+}
+// New way
+function add2(action, ...values) {
+    var total = 0;
+
+    for (var value of values) {
+        switch(action) {
+            case 'add':
+                total += value;
+                break;
+            case 'subtract':
+                total -= value;
+                break;
+        }
+    }
+
+    return total;
+}
+add2('subtract', 1, 2, 3, 4, 5);
+
+// Spread operator for merging two tables
+let source = [3, 4, 5];
+let target = [1 ,2, ...source, 6, 7];
+
+// Concatenating two tables
+let list = [1, 2, 3];
+let toAdd = [4, 5, 6];
+
+list.push(...toAdd);
