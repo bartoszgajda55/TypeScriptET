@@ -31,3 +31,23 @@ class TodoService {
         return TodoService.lastId +=1;
     }
 }
+
+// Accessors
+class SmartTodo {
+    _state: TodoState;
+    name: string;
+    
+    get state() {
+        return this._state;
+    }
+    
+    set state(newState) {
+        this._state = newState;
+    }
+    
+    constructor(name: string) {
+        this.name = name;
+    }
+}
+
+var todo3 = new SmartTodo("Pick up drycleaning");
