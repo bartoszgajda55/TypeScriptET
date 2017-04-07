@@ -70,3 +70,16 @@ function Counter(el) {
 new Counter(container);
 
 var filtered = [1, 2 ,3].filter((x) => x > 0);
+
+// Destructuring
+var array2 = [123, "Pick up drycleaning", false];
+var [id, title, completed] = array;
+// Equal to var id = array[0], title = array[1], ...
+
+var todo2 = {
+    id2: 123,
+    title2: "Pick up drycleaning",
+    completed2: false
+}
+var {id2, title2, completed2} = todo2;
+// Same but for object
